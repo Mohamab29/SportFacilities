@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>All client useres</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Homepages/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Homepages/css/heroic-features.css" rel="stylesheet">
+
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand navbar-dark flex-col bg-dark fixed-top">
+    <div class="container">
+        <p class="navbar-brand">Sports Facilities</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Admin/Adminhomepage.html">Home page</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Users
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/Homepages/Admin/Inspectors.html">Inspectors</a>
+                        <a class="dropdown-item active" href="/Homepages/Admin/clients.html">Clients</a>
+                        <a class="dropdown-item" href="/Homepages/Admin/profilepage.html">My account</a>
+                    </div>
+                </li>
+                <!--  PM2020T25-130 Reservations button-->
+                <li class="nav-item">
+                    <a class="nav-link" href="/Homepages/Admin/Reservations.html">Reservations</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Admin/AdminComplains.html">Complaints</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Admin/Damges.html">Damges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Homepages/Admin/messages_menu.html">Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Login/Login.html" onclick="localStorage.clear()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Page Content -->
+<div class="container-fluid">
+    <div class="text-xl-right" style="margin-bottom:5rem ;">
+        <h1>חשבנות המשתמשים שהם מסוג לקוח </h1>
+        <dl>
+            <dt>: על העמוד</dt>
+            <dd>.בעמוד הזה תוכל לבדוק איזה לוקחות נמצאים במערכת ומה השם משתמש שלהם</dd>
+            <dt>: חיפוש</dt>
+            <dd> .תוכל לחפש לפי שם הלקוח (אותיות קטנות) או לפי איימל (אותיות קטנות) או מספר טלפון</dd>
+            <dt>: כפתור מחיקה</dt>
+            <dd>יש לך את האפשרות למחוק לקוח וזה ימחק את המשתמש הזה מהבסיס נתונים</dd>
+            <dt> : סוג משתשמש</dt>
+            <dd>תוכל לשנות את סוג המשתמש לפקח (2) או מנהל (1) ואז הם יופיעו בדף של הפקחים</dd>
+        </dl>
+
+    </div>
+
+    <form class="form-inline d-flex justify-content-center md-form form-sm">
+        <input class="form-control form-control-md mr-3 w-75" type="text" placeholder="Search"
+               aria-label="Search" id="search" onkeyup="Search()">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </form>
+
+    <table class="table table-hover shadow  top-10" style="margin-bottom: 80px;" id="ResTable">
+        <thead>
+        <tr>
+            <th scope="col" style="text-align: center;">מחיקה</th>
+            <th scope="col" style="text-align: center;"> תאריך הרשמה</th>
+            <th scope="col" style="text-align: center;"> סוג משתמש</th>
+            <th scope="col" style="text-align: center;"> גיל</th>
+            <th scope="col" style="text-align: center;">טלפון</th>
+            <th scope="col" style="text-align: center;"> שם משתמש</th>
+            <th scope="col" style="text-align: center;"> שם האישי</th>
+
+            <th scope="col" style="text-align: center;">#</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark fixed-bottom " style="margin-bottom: auto;">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; SportsFacilities 2020</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="/Homepages/vendor/jquery/jquery.min.js"></script>
+<script src="/Homepages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function account() {
+        window.location = "/Homepages/Admin/my_account.html";
+    }
+
+</script>
+<!-- For editing and deleting the table -->
+<script src="/Homepages/Admin/clientspage.js">
+    // ID of the admin a new Product
+
+
+</script>
+</body>
+
+</html>

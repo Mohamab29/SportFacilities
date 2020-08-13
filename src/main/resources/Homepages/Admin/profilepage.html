@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Account</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Homepages/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Homepages/css/heroic-features.css" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/Homepages/profilepage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Reservations page is done !-->
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <p id="123" class="navbar-brand">Sports Facilities</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Admin/Adminhomepage.html">Home page
+                    </a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Users
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/Homepages/Admin/Inspectors.html">Inspectors</a>
+                        <a class="dropdown-item" href="/Homepages/Admin/clients.html">Clients</a>
+                        <a class="dropdown-item active" href="/Homepages/Admin/profilepage.html">My account</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Homepages/Admin/Reservations.html">Reservations</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Admin/AdminComplains.html">Complaints</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Admin/Damges.html">Damges</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Homepages/Admin/messages_menu.html">Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Login/Login.html" onclick="localStorage.clear()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</nav>
+
+
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h5>
+                        Welcome to your Profile Page
+                    </h5>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                               aria-controls="home" aria-selected="true">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                               aria-controls="profile" aria-selected="false">Edit Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-3">
+                                <p id="name"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-3">
+                                <p id="email"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Phone</label>
+                            </div>
+                            <div class="col-md-3">
+                                <p id="phone"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>Age</label>
+                            </div>
+                            <div class="col-md-3">
+                                <p id="age"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"
+                         style="line-height: 2;">
+
+
+                         <div class="row">
+                            <div class="col-md-3">
+                                <label>New Name</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="newname" type="text" pattern="[a-zA-Z]{2,20}$"/>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="myButton" onclick="EditName()">Save</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>New Email</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="newemail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="myButton" onclick="EditEmail()">Save</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>New Phone</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="newphone" type="tel" pattern="[0-9]{10}$"/>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="myButton" onclick="EditPhone()">Save</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>New Password</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input id="newpass" type="text" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$"/>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="myButton" onclick="EditPassword()">Save</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="deletebutton" onclick="DeleteAccount()">Delete Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark fixed-bottom " style="margin-bottom: auto;">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; SportsFacilities 2020</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="/Homepages/vendor/jquery/jquery.min.js"></script>
+<script src="/Homepages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- For editing and deleting the table -->
+<script src="/Homepages/getaccountpage.js"></script>
+</body>
+
+</html>

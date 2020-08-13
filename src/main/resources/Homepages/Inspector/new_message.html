@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url("/Homepages/61.png");
+
+            background-repeat: repeat;
+            background-size: 1900px 1300px;
+
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+            text-align: center;
+        }
+
+        .grid-item {
+
+            padding: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Inspector's Page</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Homepages/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Homepages/css/heroic-features.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <p class="navbar-brand">Sports Facilities</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Inspector/Inspectorshomepage.html">Home page
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Homepages/Inspector/Inspectorcomplaints.html">Complains</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Homepages/Inspector/Damgeform.html">Damge Form</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Homepages/Inspector/messages_menu.html">Messages</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        My Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/Homepages/Client/accountpage.html">profile</a>
+                        <a class="dropdown-item" href="/Login/Login.html" onclick="localStorage.clear()">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div class="box-container">
+
+    <div class="container centered ">
+      <h1>
+        <div style="margin-top: 3rem; ">כתיבת הודעה חדשה</div>
+      </h1>
+      <form action="#" method="post" onsubmit="onSubmit(event)">
+
+
+        <div class="top-form-container">
+
+          <div class="dropdown centered drop-down-postion">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+              <span class="caret" id="dropdownValue"></span></button>
+            <ul class="dropdown-menu" id="namesList"></ul>
+          </div>
+        </div>
+
+        <div class="form-group col-lg-12 col-md-8 col-md-offset-2 m-auto">
+
+          <div class="reasone-container">
+            <label class="title-label">Title</label>
+            <input type="text" id="titleInput" class="title-input">
+          </div>
+          <div class="flex">
+            <label for="inputMessage" id="message" class="message">Message</label>
+            <textarea class="form-control message-area " id="inputMessage" rows="10"></textarea>
+            <div class="alert alert-success success-size" role="alert" id="successNotification">
+              נשלח בהצלחה !
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="footerContainer custom-footer">
+      <span id="errorMessage" class="errorMessage"></span>
+      <input type="submit" class="btn btn-outline-primary" value="Send">
+    </div>
+    </form>
+  </div>
+  </div>
+</body>
+
+<script src="/Homepages/vendor/jquery/jquery.min.js"></script>
+<script src="/Homepages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="/Homepages/Inspector/new_message.js"></script>
+
+</body>
+
+</html>

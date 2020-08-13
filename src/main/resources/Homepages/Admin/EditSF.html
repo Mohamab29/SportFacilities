@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Editing Sport Facilities</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Homepages/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Homepages/css/heroic-features.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" onsubmit="onSubmit(event)">
+    <div class="container">
+        <p class="navbar-brand" style="text-align: center;">Sports Facilities</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/Homepages/Admin/Adminhomepage.html"
+                       onclick="localStorage.removeItem(`toEdit`)">Home page</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container-fluid" style="text-align: center;">
+    <div class="text-xl-right" >
+        <h1> שינוי במתקן </h1>
+        <dl>
+            <dt>: על העמוד</dt>
+            <dd>.בעמוד הזה תוכל לבדוק איזה תלונות שלח הפקח למערכת ומה הוא תיעד ועל איזה מתקן ספורט</dd>
+            <dt>: Name </dt>
+            <dd>. שם המתקן</dd>
+            <dt>: Condition </dt>
+            <dd>.אם המתקן פעיל או לא</dd>
+            <dt>: Lighting </dt>
+            <dd>. אם יש תיאורה או לא</dd>
+            <dt>: Fence </dt>
+            <dd>. אם יש גדר או לא</dd>
+        </dl>
+
+    </div>
+    <!-- Material form contact -->
+    <h3 class="info-color" >Edit Facility</h3>
+
+    <form class="form-group " style=" text-align: inherit; display: inline-block;" onsubmit="getAd()">
+
+        <label for="name">Name</label>
+
+        <input type="text" class="form-control " id="name" placeholder="Facility name">
+
+        <label for="seats">Condition</label>
+
+        <input type="text" class="form-control" placeholder="Avaliable/Not" id="cond"/>
+
+        <label for="seats">Lighting</label>
+
+        <input type="text" class="form-control" placeholder="True/False" id="light"/>
+
+        <label for="seats">Fence</label>
+        <input type="text" class="form-control" placeholder="True/False" id="fence"/>
+        <button type="submit" class="btn btn-success col-4 " style="margin-top: 10px;" id="save">Save</button>
+    </form>
+</div>
+
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark fixed-bottom">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; SportsFacilities 2020</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="/Homepages/vendor/jquery/jquery.min.js"></script>
+<script src="/Homepages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    function account() {
+        window.location = "/Homepages/Admin/my_account.html";
+    }
+</script>
+<script src="/Homepages/Admin/EditAd.js"></script>
+</body>
+
+</html>
